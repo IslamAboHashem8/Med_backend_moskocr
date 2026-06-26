@@ -73,9 +73,7 @@ router.post('/', upload.single('image'), async (req, res) => {
         });
     }
 });
-        // ==============================
-        // Save to DB
-        // ==============================
+       
         const savedDoses = await Dose.insertMany(allDoses);
         res.status(200).json({
             message: "Image uploaded successfully",
